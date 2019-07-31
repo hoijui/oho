@@ -1,3 +1,23 @@
+										
+         			LICENSE
+MediaWiki is free software licensed under version 2 of the GNU General Public License. Because MediaWiki is licensed free of charge, there is no warranty, to the extent permitted by applicable law. Read the full text of the GNU GPL version 2 for details.(https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+
+
+				SYSTEM REQUIREMENTS
+MediaWiki requires PHP 7.0.13+ and either MySQL 5.5.8+, MariaDB, or one of the other three possible stores. For more information, please read the pages on system requirements(https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Installation_requirements) and compatibility(https://www.mediawiki.org/wiki/Special:MyLanguage/compatibility).
+
+
+				SUMMARY
+	For experienced users, here is the quick version of the installation instructions. Most users will want to go through all the passages.
+
+1-Check that your system meets the minimum requirements shown nearby; Installation requirements has more details.
+2-Download MediaWiki (direct link to download the stable release version) and extract the archive to a web-accessible folder on your server.
+3-Point your browser to the directory where MediaWiki was extracted and follow the link to the setup screen. It should be in the form http://domain/directory/mw-config/index.php. Replace directory with the path to your extracted MediaWiki folder. If installing on a local machine, replace domain with localhost. If you install locally and later want to access your wiki from domain, then you will need to change LocalSettings.php from localhost to domain. If installed on a remote server, replace domain with your server's domain name (eg: www.myserver.com).
+4-Follow the on-screen instructions to complete the process.
+These instructions are deliberately brief. There is a lot that could go wrong, so if in doubt, you are advised to read the full instructions!
+					
+					
 					INSTALLING MEDIAWIKI
 				
 
@@ -50,7 +70,7 @@ MediaWiki will ask you for database and user name and will attempt to create the
 CREATE DATABASE wikidb;
 CREATE USER 'wikiuser'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON wikidb.* TO 'wikiuser'@'localhost' WITH GRANT OPTION;
-If your database is not running on the same server as your web server, you need to give the appropriate web server hostname — mediawiki.example.com in the example below — as follows:
+If your database is not running on the same server as your web server, you need to give the appropriate web server hostname â€” mediawiki.example.com in the example below â€” as follows:
 
 GRANT ALL PRIVILEGES ON wikidb.* TO 'wikiuser'@'mediawiki.example.com' IDENTIFIED BY 'password';
 
@@ -72,7 +92,7 @@ CREATE DATABASE wikidb WITH OWNER wikiuser;
 
 
 			~Run the installation script~
-Once all of the above steps are complete, you can complete the installation through a web browser by going to the index.php URL in your browser — check the instructions mentioned in Manual:Config script.
+Once all of the above steps are complete, you can complete the installation through a web browser by going to the index.php URL in your browser â€” check the instructions mentioned in Manual:Config script.
 
 The installation tool will prompt you to download the LocalSettings.php file, and to save this as <MediaWiki-folder>/LocalSettings.php.
 
@@ -86,13 +106,13 @@ The Bootstrap extension requires Composer for installation.
 2-Add mediawiki/bootstrap: ~4.0 as a requirement to your "composer.local.json" file in the MediaWiki installation directory
 3-Run composer update --no-dev "mediawiki/bootstrap"
 4-Load the extension by adding the following line to LocalSettings.php: wfLoadExtension( 'Bootstrap' );
-5-Yes Done – Navigate to "Special:Version" on your wiki to verify that the extension is successfully installed.
+5-Yes Done â€“ Navigate to "Special:Version" on your wiki to verify that the extension is successfully installed.
 
 	2-CategoryTree
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/CategoryTree) and place the file(s) in a directory called CategoryTree in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'CategoryTree' );
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	3-Cite
 1-If using Vagrant, install with vagrant roles enable cite --provision
@@ -101,13 +121,13 @@ wfLoadExtension( 'CategoryTree' );
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/Cite) and place the file(s) in a directory called Cite in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'Cite' );
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
-	4-CiteThþsPage
+	4-CiteThÃ¾sPage
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/CiteThisPage) and place the file(s) in a directory called CiteThisPage in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'CiteThisPage' );
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	5-CodeEditor
 1-If using Vagrant, install with vagrant roles enable codeeditor --provision
@@ -118,14 +138,14 @@ wfLoadExtension( 'CiteThisPage' );
 wfLoadExtension( 'CodeEditor' );
 $wgDefaultUserOptions['usebetatoolbar'] = 1; // user option provided by WikiEditor extension
 3-Configure as required.
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	6-Comments
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/Comments) and place the file(s) in a directory called Comments in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'Comments' );
 3-Run the update script which will automatically create the necessary database tables that this extension needs.
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	7-ConfirmEdit
 1-If using Vagrant, install with vagrant roles enable confirmedit --provision
@@ -136,7 +156,7 @@ wfLoadExtension( 'Comments' );
 wfLoadExtension( 'ConfirmEdit' );
 3-Enable the CAPTCHA type which should be used
 4-Configure as needed
-5-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+5-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	8-ContactPage
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/ContactPage) and place the file(s) in a directory called ContactPage in your extensions/ folder.
@@ -165,20 +185,20 @@ $wgContactConfig['default'] = array(
 );
 
 3-See the README(https://phabricator.wikimedia.org//r/p/mediawiki/extensions/ContactPage;browse/master/README%3Fview%3Draw) file for further options to customize and adapt as it convenes. Note, however, that since March 2014, it is no longer possible to prefill text from MediaWiki:Contactpage-text-[form-name].
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	9-EmbedVideo
 1-Download(https://gitlab.com/hydrawiki/extensions/EmbedVideo/-/archive/v2.8.0/EmbedVideo-v2.8.0.zip) and place the file(s) in a directory called EmbedVideo in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'EmbedVideo' );
 3-Configure as required(https://www.mediawiki.org/wiki/Extension:EmbedVideo#Configuration)
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	10-Gadgets
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/Gadgets) and place the file(s) in a directory called Gadgets in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'Gadgets' );
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	11-HtmlSpecialFunctions
 
@@ -191,13 +211,13 @@ $wgImageMagickConvertCommand = "/usr/bin/convert";
 2-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/ImageMap) and place the file(s) in a directory called ImageMap in your extensions/ folder.
 3-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'ImageMap' );
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	13-InputBox
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/InputBox) and place the file(s) in a directory called InputBox in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'InputBox' );
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	14-InterWiki
 1-Get the latest revision of the code from InterWiki.php(https://code.organicdesign.nz/extensions/tree/master/MediaWiki-Legacy/InterWiki/), save as a file in your extensions directory and include from your LocalSettings.php file as usual.
@@ -208,7 +228,7 @@ wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'LocalisationUpdate' );
 $wgLocalisationUpdateDirectory = "$IP/cache";
 3-Create a cache folder in the installation directory, and be sure the server has permissions to write on it.
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	16-MsUpload
 1-Install the WikiEditor extension(https://www.mediawiki.org/wiki/Extension:WikiEditor). By default its editing toolbar is enabled for all users.
@@ -216,7 +236,7 @@ $wgLocalisationUpdateDirectory = "$IP/cache";
 3-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'MsUpload' );
 Configure as required.
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	17-MultimediaViewer
  Option A: use Vagrant. See the MediaWiki-Vagrant page for instructions to get a MediaWiki installation going with a Vagrant virtual machine system.
@@ -233,7 +253,7 @@ You'll also likely want to download Extension:CommonsMetadata - it's not a hard 
 Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/MultimediaViewer) and place the file(s) in a directory called MultimediaViewer in your extensions/ folder.
 Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'MultimediaViewer' );
-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	18-OATHAuth
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/OATHAuth) and place the file(s) in a directory called OATHAuth in your extensions/ folder.
@@ -241,13 +261,13 @@ Yes Done – Navigate to Special:Version on your wiki to verify that the extension
 wfLoadExtension( 'OATHAuth' );
 3-Run the update script which will automatically create the necessary database tables that this extension needs.
 4-Configure as required.
-5-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+5-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	19-PageForms
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/PageForms) and place the file(s) in a directory called PageForms in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'PageForms' );
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	20-ParserFunctions
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/ParserFunctions) and place the file(s) in a directory called ParserFunctions in your extensions/ folder.
@@ -255,7 +275,7 @@ wfLoadExtension( 'PageForms' );
 wfLoadExtension( 'ParserFunctions' );
 3-Configure as required, e.g. if you want to use the integrated string function functionality, add just after that line:
 $wgPFEnableStringFunctions = true;
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	21-PdfHandler
 1-Make sure that the required software(https://www.mediawiki.org/wiki/Extension:PdfHandler#Pre-requisites) is installed before you continue!
@@ -263,13 +283,13 @@ $wgPFEnableStringFunctions = true;
 3-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'PdfHandler' );
 4-Configure as required. (see also the examples provided)
-5-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+5-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	22-PipeEscape
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/PipeEscape) and place the file(s) in a directory called PipeEscape in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 require_once "$IP/extensions/PipeEscape/PipeEscape.php";
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	23-Poem
 1-If using Vagrant, install with vagrant roles enable poem --provision
@@ -278,13 +298,13 @@ require_once "$IP/extensions/PipeEscape/PipeEscape.php";
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/Poem) and place the file(s) in a directory called Poem in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'Poem' );
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	24-Renameuser
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/Renameuser) and place the file(s) in a directory called Renameuser in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'Renameuser' );
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	25-ReplaceText
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/ReplaceText) and place the file(s) in a directory called ReplaceText in your extensions/ folder.
@@ -292,7 +312,7 @@ wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'ReplaceText' );
 3-By default, only members of the 'sysop' user group have access to the Replace Text functionality. You can add to or modify the set of allowed users by modifying the $wgGroupPermissions array in LocalSettings.php. To add the permission for 'bureaucrat' or 'bot' users, for instance, you would add the following:
 $wgGroupPermissions['bureaucrat']['replacetext'] = true;
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	26-SemanticImageInput
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/SemanticImageInput) and place the file(s) in a directory called SemanticImageInput in your extensions/ folder.
@@ -300,7 +320,7 @@ $wgGroupPermissions['bureaucrat']['replacetext'] = true;
 require_once "$IP/extensions/SemanticImageInput/SemanticImageInput.php";
 $wgUseInstantCommons = true; // Required for embedding of images
 3-Configure as required.
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	27-SemanticMediaWiki
 The respective instructions are located on the help page about installing Semantic MediaWiki.(https://www.semantic-mediawiki.org/wiki/Help:Installation)
@@ -313,7 +333,7 @@ Check out the Semantic Result Formats documentation on the SMW wiki.(https://www
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'SpamBlacklist' );
 3-Configure the blacklist at your convenience
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	30-SyntaxHighlight_GeSHi
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/SyntaxHighlight_GeSHi) and place the file(s) in a directory called SyntaxHighlight_GeSHi in your extensions/ folder.
@@ -322,26 +342,26 @@ wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
  *In Linux, set execute permissions for the pygmentize binary. You can use an FTP client or the following shell command to do so:
 chmod a+x /path/to/extensions/SyntaxHighlight_GeSHi/pygments/pygmentize
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	31-TitleBlackList
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/TitleBlacklist) and place the file(s) in a directory called TitleBlacklist in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'TitleBlacklist' );
 3-Configure blacklist sources (see below)
-4-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+4-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	32-Variables
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/Variables) and place the file(s) in a directory called Variables in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'Variables' );
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	33-VEForAll
 1-Download(https://www.mediawiki.org/wiki/Special:ExtensionDistributor/VEForAll) and place the file(s) in a directory called VEForAll in your extensions/ folder.
 2-Add the following code at the bottom of your LocalSettings.php:
 wfLoadExtension( 'VEForAll' );
-3-Yes Done – Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
+3-Yes Done â€“ Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
 	34-VisualEditor
 For the General User: If you're using the latest stable version of MediaWiki you will need to download the VisualEditor-MediaWiki extension from the ExtensionDistributor page.
