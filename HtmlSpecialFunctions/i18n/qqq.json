@@ -1,0 +1,9 @@
+{
+    "@metadata": {
+        "authors": [
+            "Javier Finol"
+        ]
+    },
+    "htmlSpecialFunctions": "The name of the extension",
+    "htmlSpecialFunctions-desc": "{{desc|name=HtmlSpecialFunctions|url=}}"
+}

@@ -1,0 +1,22 @@
+{
+	"name": "HtmlSpecialFunctions",
+	"author": "Javier Finol",
+	"license-name": "GPL-2.0+",
+	"version": "1.0",
+	"namemsg": "htmlSpecialFunctions",
+	"descriptionmsg": "htmlSpecialFunctions-desc",
+	"manifest_version": 1,
+	"MessagesDirs": {
+		"HtmlSpecialFunctions": [ "i18n" ]
+	},
+	"type": "parserhook",
+	"AutoloadClasses": {
+		"HtmlSpecialFunctions": "HtmlSpecialFunctions.php"
+	},
+	"ExtensionMessagesFiles": {
+		"HtmlSpecialFunctionsMagic": "HtmlSpecialFunctions.i18n.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit":"HtmlSpecialFunctions::onParserSetup"
+	}
+}
